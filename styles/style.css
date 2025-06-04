@@ -4,13 +4,39 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
 
 .page {
+  margin: auto;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-text-font-family), sans-serif;
+  font-weight: var(--main-page-text-font-weight, 400);
+  font-variation-settings: "wght" var(--main-page-text-font-weight, 400);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 120px 14px;
+  background-color: aquamarine;
+  margin-block-start: 100px;
+  margin-block-end: 100px;
+  font-family: var(--accented-text-font-family), sans-serif;
+  text-transform: uppercase;
+}
+
+.header__logo {
+  font-size: var(--header-logo-font-size);
+}
+
+.header__title {
+  font-size: var(--header-title-font-size);
 }
