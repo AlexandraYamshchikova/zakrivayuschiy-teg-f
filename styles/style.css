@@ -18,6 +18,8 @@
   font-variation-settings: "wght" var(--main-page-text-font-weight, 400);
 }
 
+/*Шапка*/
+
 .header {
   display: flex;
   flex-direction: column;
@@ -25,12 +27,14 @@
   align-items: center;
   gap: 20px;
   width: 100%;
-  padding: 120px 14px;
+  padding-block: clamp(7.5rem, 0.751vw + 7.324rem, 8rem);
+  padding-inline: clamp(0.875rem, 9.953vw - 1.458rem, 7.5rem);
   background-color: aquamarine;
   margin-block-start: 100px;
   margin-block-end: 100px;
   font-family: var(--accented-text-font-family), sans-serif;
   text-transform: uppercase;
+  border: 2px solid #000;
 }
 
 .header__logo {
@@ -40,3 +44,68 @@
 .header__title {
   font-size: var(--header-title-font-size);
 }
+
+/*Контейнер*/
+
+.articles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /*TODO кое-где 52px*/
+}
+
+.save-button {
+  padding: 15px 20.5px 15px 19.5px;
+  background-color: var(--save-button-bg-color);
+  font-family: var(--accented-text-font-family);
+  font-size: var(--save-button-font-size);
+  inline-size: fit-content;
+}
+
+/*Article*/
+
+.article {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000;
+  font-size: var(--article-text-font-size);
+}
+
+.article__title {
+  padding: 4px 10px 6px 10px;
+  font-size: inherit;
+  font-variation-settings: "wght" var(--article-title-font-weight, 700);
+}
+
+.article__image {
+  border: 2px solid #000;
+}
+
+.article__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding: 25px 27px;
+}
+
+.article__text {
+              /*TODO если надо, удалить*/
+}
+
+
+/*Кнопка like*/
+
+.article-like-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 12px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+}
+
