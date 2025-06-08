@@ -60,11 +60,22 @@
 }
 
 .save-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   padding: 15px 20.5px 15px 19.5px;
   background-color: var(--save-button-bg-color);
   font-family: var(--accented-text-font-family);
   font-size: var(--save-button-font-size);
   inline-size: fit-content;
+}
+
+.save-button svg {
+  display: block;
+  width: 28px;
+  height: 28px;
 }
 
 /*Article*/
@@ -108,4 +119,3 @@
   padding-right: 25px;
   padding-bottom: 25px;
 }
-
