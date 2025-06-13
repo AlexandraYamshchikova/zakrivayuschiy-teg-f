@@ -13,9 +13,13 @@
   --header-title-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --article-text-font-size: 18px;
   --save-button-font-size: 14px;
+  --article-label-font-size: 14px;
+
+  --article-title-line-height: 120%;
+  --buttons-line-height: 90%;
 
   /*Фон*/
-  --background-img: ;
 
   --save-button-bg-color: #fff;
+  --like-button-bg-color: #fff;
 }

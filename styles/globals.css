@@ -22,7 +22,8 @@ p,
 ul,
 ol,
 li,
-svg {
+svg,
+button {
   margin: 0;
   padding: 0;
 }
