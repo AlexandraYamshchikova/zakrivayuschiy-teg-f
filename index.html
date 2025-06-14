@@ -72,14 +72,14 @@
                 </svg>
               </button>
               <!--TODO разобраться с вставкой кнопок-->
-              <button class="card__like-button">
+              <button class="card__like-button button-style">
                 <span class="button__text">Like</span>
               </button>
             </div>
           </article>
         </ul>
         <button
-          class="save-button"
+          class="save-button button-style"
           type="button"
           onclick="window['dialog-id'].showModal()"
           aria-controls="dialog-id"
@@ -92,9 +92,19 @@
       </div>
     </main>
     <dialog id="dialog-id">
-      <svg viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg"><use href="svg/floppy_(2).svg#floppy"/></svg>
-      <h2>Вставьте дискету, чтобы продолжить</h2>
-      <button class="button__text">ОК</button>
+      <div class="dialog__content">
+        <svg viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg">
+          <use href="svg/floppy_(2).svg#floppy" />
+        </svg>
+        <h2>Вставьте дискету, чтобы продолжить</h2>
+        <button
+          class="button-style button__text"
+          type="button"
+          onclick="window['dialog-id'].close()"
+        >
+          ОК
+        </button>
+      </div>
     </dialog>
     <script src="./scripts/like.js"></script>
   </body>
