@@ -99,6 +99,7 @@
 .button-style:hover {
   background-color: transparent;
   color: white;
+  animation: button-hover-main 0.5s ease-in-out;
 }
 
 .button-style:hover::before {
@@ -111,18 +112,26 @@
   height: 100%;
   background-color: #000;
   cursor: pointer;
-  animation: loading 0.5s ease-in-out;
+  animation: button-hover-before 0.5s ease-in-out;
 }
 
-
-@keyframes loading {
+@keyframes button-hover-before {
   0% {
     width: 0;
   }
   100% {
     width: 100%;
   }
-} 
+}
+
+@keyframes button-hover-main {
+  0% {
+    color: #000;
+  }
+  100% {
+    color: white;
+  }
+}
 
 .button-style:focus {
   outline: none;
@@ -244,7 +253,7 @@ dialog[open] {
   /*display: grid;
   backdrop-filter: opacity(75%);
   column-gap: 20px;
-  row-gap: 30px;*/                      /*TODO Если надо, удалить*/
+  row-gap: 30px;*/ /*TODO Если надо, удалить*/
   padding: 30px 42px;
   border: none;
   outline: 2px solid #000;
@@ -274,7 +283,6 @@ dialog button {
   outline: 2px solid #000;
 }
 
-
 /*Для телефонов меньше 375px */
 
 @media (width < 375px) {
@@ -290,7 +298,6 @@ dialog button {
     padding: 12.5px 0px;
   }
 }
-
 
 /*Для экранов шире 375px */
 
