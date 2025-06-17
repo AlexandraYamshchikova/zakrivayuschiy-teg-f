@@ -86,21 +86,36 @@
   background-color: var(--button-bg-color);
   outline: none;
   border: 2px solid #000;
+  overflow: hidden;
+  color: #fff;
+}
+
+.button-style::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out;
+}
+
+
+.button-style span,
+.button-style svg {
+  mix-blend-mode: difference;
 }
 
 /*ховер-эффект*/
 
-.button-style {
-  position: relative;
-  background-color: var(--button-bg-color);
-  outline: none;
-  border: 2px solid #000;
+.button-style:hover::before {
+  transform: translateX(0%);
 }
 
+/*
 .button-style:hover {
   background-color: transparent;
   color: white;
-  animation: button-hover-button 0.5s /*2 alternate*/ ease-in-out;
+  animation: button-hover-button 0.5s 2 alternate ease-in-out;
 }
 
 .button-style:hover::before {
@@ -113,8 +128,9 @@
   height: 100%;
   background-color: #000;
   cursor: pointer;
-  animation: button-hover-vail 0.5s /*2 alternate*/ ease-in-out;
+  animation: button-hover-vail 0.5s 2 alternate ease-in-out;
 }
+
 
 @keyframes button-hover-vail {
   0% {
@@ -122,7 +138,7 @@
   }
   100% {
     width: 100%;
-  }
+  }                                       TODO Можно использовать в качестве образца при анимации лайка
 }
 
 @keyframes button-hover-button {
@@ -133,6 +149,7 @@
     color: white;
   }
 }
+*/
 
 .button-style:focus {
   outline: none;
@@ -149,9 +166,10 @@
   line-height: var(--buttons-line-height);
 }
 
+/*
 .button-style:hover .button-text {
   color: #fff;
-}
+}        TODO раскомментировать или удалить*/
 
 /*Article*/
 
