@@ -100,7 +100,7 @@
 .button-style:hover {
   background-color: transparent;
   color: white;
-  animation: button-hover-main 0.5s ease-in-out;
+  animation: button-hover-button 0.5s /*2 alternate*/ ease-in-out;
 }
 
 .button-style:hover::before {
@@ -113,10 +113,10 @@
   height: 100%;
   background-color: #000;
   cursor: pointer;
-  animation: button-hover-before 0.5s ease-in-out;
+  animation: button-hover-vail 0.5s /*2 alternate*/ ease-in-out;
 }
 
-@keyframes button-hover-before {
+@keyframes button-hover-vail {
   0% {
     width: 0;
   }
@@ -125,7 +125,7 @@
   }
 }
 
-@keyframes button-hover-main {
+@keyframes button-hover-button {
   0% {
     color: #000;
   }
