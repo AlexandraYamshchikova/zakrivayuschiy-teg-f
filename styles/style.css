@@ -298,6 +298,7 @@
 
 .like-icon.is-liked .heart__outline {
   fill: var(--heart-animation-fill-color);
+  transition: fill 0.1s linear;
 }
 
 
