@@ -111,46 +111,6 @@
   transform: translateX(0%);
 }
 
-/*
-.button-style:hover {
-  background-color: transparent;
-  color: white;
-  animation: button-hover-button 0.5s 2 alternate ease-in-out;
-}
-
-.button-style:hover::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  cursor: pointer;
-  animation: button-hover-vail 0.5s 2 alternate ease-in-out;
-}
-
-
-@keyframes button-hover-vail {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }                                       TODO Можно использовать в качестве образца при анимации лайка
-}
-
-@keyframes button-hover-button {
-  0% {
-    color: #000;
-  }
-  100% {
-    color: white;
-  }
-}
-*/
-
 .button-style:focus {
   outline: none;
 }
@@ -223,7 +183,7 @@
   line-height: 116%;
 }
 
-/*Кнопка like*/
+/*Кнопки like*/
 
 .article-like-container {
   display: flex;
@@ -234,16 +194,83 @@
   padding-bottom: 25px;
 }
 
-.card__icon-button svg {
-  display: block;
-  width: 27px;
-  height: 24px;
-}
-
 .card__icon-button {
   display: block;
   border: none;
   background-color: transparent;
+}
+
+.like-icon {
+  display: block;
+  width: 39px;
+  height: 36px;
+}
+
+/*Стилизация svg сердца*/
+.card__icon-button .heart__fill {
+  fill: transparent;
+  transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button .heart__cross {
+  fill: transparent;
+  transition: fill 0.3s linear;
+  transition-delay: 0.03s;
+}
+
+
+/*Ховер*/
+.card__icon-button:hover .heart__fill {
+  fill: var(--heart-hover-color);
+}
+
+
+.card__icon-button:hover .heart__cross {
+  fill: var(--heart-hover-color);
+  transition-delay: 0s;
+}
+
+
+
+/*Удержание*/
+.card__like-button:active .heart {
+  animation: 
+}
+
+.card__like-button:active .heart__outline {
+  fill: var(--heart-outline-color);
+}
+
+.card__like-button:active .heart__fill {
+  fill: var(--heart-animation-fill-color);
+}
+
+.card__like-button:active .heart__cross {
+  fill: var(--heart-animation-fill-color);
+}
+
+.card__like-button:active .heart__sparks {
+  fill: var(--heart-animation-fill-color);
+}
+
+@keyframes heart-icon-size-active {
+
+}
+
+@keyframes heart-icon-outline-active {
+
+}
+
+@keyframes heart-icon-fill-active {
+
+}
+
+@keyframes heart-icon-cross-active {
+
+}
+
+@keyframes heart-icon-rays-active {
+
 }
 
 .card__like-button {

@@ -26,4 +26,14 @@
   --save-button-bg-color: #fff;
   --like-button-bg-color: #fff;
   --label-text-shadow-color: #fff;
+
+  /*Сердце*/
+
+  --heart-outline-color: #000;
+  --heart-hover-color: #000;
+  --heart-animation-fill-color: rgb(255, 0, 0);
+  /*--heart-sparks-color: rgb(255, 0, 0);
+  --heart-cross-color: #fff;                              TODO мб удалить потом*/
+  --heart-animation-width: 33px;
+  --heart-animation-height: 30px;
 }
