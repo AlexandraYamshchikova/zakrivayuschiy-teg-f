@@ -207,25 +207,32 @@
 }
 
 /*Стилизация svg сердца*/
-.card__icon-button .heart__fill {
+.like-icon .heart__fill {
   fill: transparent;
   transition: fill 0.3s linear 0.05s;
 }
 
-.card__icon-button .heart__cross {
+.like-icon .heart__cross {
   fill: transparent;
   transition: fill 0.3s linear;
   transition-delay: 0.03s;
 }
 
+/*Контур*/
+.like-icon .heart__outline {
+  fill: var(--heart-outline-color);
+  transition: fill 0.3s linear;
+  transition-delay: 0.06s;
+}
+
 
 /*Ховер*/
-.card__icon-button:hover .heart__fill {
+.like-icon:hover .heart__fill {
   fill: var(--heart-hover-color);
 }
 
 
-.card__icon-button:hover .heart__cross {
+.like-icon:hover .heart__cross {
   fill: var(--heart-hover-color);
   transition-delay: 0s;
 }
@@ -234,58 +241,84 @@
 
 /*Удержание*/
 
-.card__icon-button:active .heart__fill {
+.like-icon:active .heart__fill {
   fill: var(--heart-active-color);
 }
 
-.card__icon-button:active .heart__cross {
+.like-icon:active .heart__cross {
   fill: var(--heart-active-color);
 }
+
+/*Клик*/
+/*Сердце*/
+.like-icon.is-liked .heart {
+  animation-name: heart-icon-heart-liked;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-delay: 0.1s;
+}
+
+@keyframes heart-icon-heart-liked {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+/*Искры (лучи)*/
+.like-icon.is-liked .heart__sparks {
+  animation-name: heart-icon-rays-liked;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-delay: 0.3s;
+}
+
+@keyframes heart-icon-rays-liked {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: var(--heart-animation-fill-color);
+  }
+}
+
+/*Заливка сердца*/
+
+.like-icon.is-liked .heart__fill {
+  fill: var(--heart-animation-fill-color);
+}
+
+.like-icon.is-liked .heart__cross {
+  fill: var(--heart-animation-fill-color);
+}
+
+.like-icon.is-liked .heart__outline {
+  fill: var(--heart-animation-fill-color);
+}
+
 
 
 
 
 
 /*
-.card__icon-button:active .heart {
-  animation: 
-}
-
-.card__icon-button:active .heart__outline {
-  fill: var(--heart-outline-color);
-}
-
-.card__icon-button:active .heart__fill {
-  fill: var(--heart-animation-fill-color);
-}
-
-.card__icon-button:active .heart__cross {
-  fill: var(--heart-animation-fill-color);
-}
-
-.card__icon-button:active .heart__sparks {
-  fill: var(--heart-animation-fill-color);
-}*/
-
-@keyframes heart-icon-size-active {
+@keyframes heart-icon-outline-liked {
 
 }
 
-@keyframes heart-icon-outline-active {
+@keyframes heart-icon-fill-liked {
 
 }
 
-@keyframes heart-icon-fill-active {
+@keyframes heart-icon-cross-liked {
 
 }
 
-@keyframes heart-icon-cross-active {
-
-}
-
-@keyframes heart-icon-rays-active {
-
-}
+*/
 
 .card__like-button {
   display: flex;
