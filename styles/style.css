@@ -233,25 +233,39 @@
 
 
 /*Удержание*/
-.card__like-button:active .heart {
+
+.card__icon-button:active .heart__fill {
+  fill: var(--heart-active-color);
+}
+
+.card__icon-button:active .heart__cross {
+  fill: var(--heart-active-color);
+}
+
+
+
+
+
+/*
+.card__icon-button:active .heart {
   animation: 
 }
 
-.card__like-button:active .heart__outline {
+.card__icon-button:active .heart__outline {
   fill: var(--heart-outline-color);
 }
 
-.card__like-button:active .heart__fill {
+.card__icon-button:active .heart__fill {
   fill: var(--heart-animation-fill-color);
 }
 
-.card__like-button:active .heart__cross {
+.card__icon-button:active .heart__cross {
   fill: var(--heart-animation-fill-color);
 }
 
-.card__like-button:active .heart__sparks {
+.card__icon-button:active .heart__sparks {
   fill: var(--heart-animation-fill-color);
-}
+}*/
 
 @keyframes heart-icon-size-active {
 

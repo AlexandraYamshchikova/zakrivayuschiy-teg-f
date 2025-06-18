@@ -31,6 +31,7 @@
 
   --heart-outline-color: #000;
   --heart-hover-color: #000;
+  --heart-active-color: rgb(255, 0, 0);
   --heart-animation-fill-color: rgb(255, 0, 0);
   /*--heart-sparks-color: rgb(255, 0, 0);
   --heart-cross-color: #fff;                              TODO мб удалить потом*/
