@@ -20,12 +20,18 @@
   --buttons-line-height: 90%;
   --dialog-text-line-height: 150%;
 
-  /*Фон*/
+  /*Фон и цвета*/
 
+  --page-bg-img: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+  --header-bg-color: #fff;
+  --article-bg-color: #fff;
   --button-bg-color: #fff;
   --save-button-bg-color: #fff;
-  --like-button-bg-color: #fff;
   --label-text-shadow-color: #fff;
+
+  --borders-color: #000;
 
   /*Сердце*/
 
@@ -33,6 +39,5 @@
   --heart-hover-color: #000;
   --heart-active-color: rgb(255, 0, 0);
   --heart-animation-fill-color: rgb(255, 0, 0);
-  /*--heart-sparks-color: rgb(255, 0, 0);
-  --heart-cross-color: #fff;                              TODO мб удалить потом*/
+
 }
