@@ -62,9 +62,8 @@
 .articles-list {
   display: flex;
   flex-direction: column;
-  gap: 50px; /*TODO кое-где 52px*/
+  gap: 50px;
 }
-
 
 /*Кнопка Сохранить*/
 
@@ -131,11 +130,6 @@
   line-height: var(--buttons-line-height);
 }
 
-/*
-.button-style:hover .button-text {
-  color: #fff;
-}        TODO раскомментировать или удалить*/
-
 /*Article*/
 
 .article {
@@ -191,7 +185,7 @@
 }
 
 .saturate-hue-rotate-filter {
-    filter: saturate(98%) hue-rotate(39deg)
+  filter: saturate(98%) hue-rotate(39deg);
 }
 
 .article__label {
@@ -202,7 +196,8 @@
   font-family: var(--accented-text-font-family);
   font-size: var(--article-label-font-size);
   text-shadow: -1px 0 var(--label-text-shadow-color, #fff),
-    0 1px var(--label-text-shadow-color, #fff), 1px 0 var(--label-text-shadow-color, #fff),
+    0 1px var(--label-text-shadow-color, #fff),
+    1px 0 var(--label-text-shadow-color, #fff),
     0 -1px var(--label-text-shadow-color, #fff);
   opacity: 50%;
   mix-blend-mode: hard-light;
@@ -298,9 +293,6 @@ dialog button {
   color: #000;
 }
 
-
-
-
 /*Для телефонов меньше 375px */
 
 @media (width < 375px) {
@@ -350,10 +342,10 @@ dialog button {
   }
 
   .save-button svg {
-  display: block;
-  width: 21px;
-  height: 21px;
-}
+    display: block;
+    width: 21px;
+    height: 21px;
+  }
 
   .article__title {
     line-height: var(--article-title-desktop-line-height);
