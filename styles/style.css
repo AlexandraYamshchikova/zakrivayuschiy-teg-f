@@ -203,7 +203,7 @@
   mix-blend-mode: hard-light;
 }
 
-@supports ((text-stroke) or (-webkit-text-stroke)) {
+@supports ((text-stroke: 1px var(--label-text-shadow-color, #fff)) or (-webkit-text-stroke: 1px var(--label-text-shadow-color, #fff))) {
   .article__label {
     -webkit-text-stroke: 1px var(--label-text-shadow-color, #fff);
     text-stroke: 1px var(--label-text-shadow-color, #fff);
