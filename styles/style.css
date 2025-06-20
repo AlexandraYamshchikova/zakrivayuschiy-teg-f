@@ -203,6 +203,14 @@
   mix-blend-mode: hard-light;
 }
 
+@supports ((text-stroke) or (-webkit-text-stroke)) {
+  .article__label {
+    -webkit-text-stroke: 1px var(--label-text-shadow-color, #fff);
+    text-stroke: 1px var(--label-text-shadow-color, #fff);
+    text-shadow: none;
+  }
+} 
+
 .article__text-container {
   display: flex;
   flex-direction: column;
