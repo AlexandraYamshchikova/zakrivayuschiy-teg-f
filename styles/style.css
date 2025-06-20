@@ -65,6 +65,9 @@
   gap: 50px; /*TODO кое-где 52px*/
 }
 
+
+/*Кнопка Сохранить*/
+
 .save-button {
   display: flex;
   flex-direction: column;
@@ -208,7 +211,7 @@
 .article__text-container {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 27px;
   padding: 25px 25px;
 }
 
@@ -344,5 +347,15 @@ dialog button {
 
   dialog[open] {
     padding: 30px;
+  }
+
+  .save-button svg {
+  display: block;
+  width: 21px;
+  height: 21px;
+}
+
+  .article__title {
+    line-height: var(--article-title-desktop-line-height);
   }
 }

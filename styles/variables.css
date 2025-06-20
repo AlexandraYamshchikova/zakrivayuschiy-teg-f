@@ -16,7 +16,8 @@
   --article-label-font-size: 14px;
   --dialog-title-font-size: 14px;
 
-  --article-title-line-height: 120%;
+  --article-title-line-height: 123%;
+  --article-title-desktop-line-height: 120%;
   --buttons-line-height: 90%;
   --dialog-text-line-height: 150%;
 
