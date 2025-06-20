@@ -325,8 +325,8 @@ dialog button {
   }
 
   .save-button svg {
-    width: 28px;
-    height: 28px;
+    width: 21px;
+    height: 21px;
   }
 
   dialog button {
@@ -339,11 +339,6 @@ dialog button {
 
   dialog[open] {
     padding: 30px;
-  }
-
-  .save-button svg {
-    width: 21px;
-    height: 21px;
   }
 
   .article__title {
