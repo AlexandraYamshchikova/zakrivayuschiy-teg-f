@@ -57,6 +57,7 @@
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-delay: 0.1s;
+  transform-origin: center
 }
 
 @keyframes heart-icon-heart-liked {
