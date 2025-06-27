@@ -16,12 +16,13 @@
   margin-bottom: 100px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-text-font-family), sans-serif;
+  font-family: var(--main-text-font-family), "Arial", sans-serif;
   font-weight: var(--main-page-text-font-weight, 400);
   font-variation-settings: "wght" var(--main-page-text-font-weight, 400);
   background-image: var(--page-bg-img, #fff);
   background-attachment: fixed;
   background-position: cover;
+  background-color: #fff;
 }
 
 /*Шапка*/
@@ -37,7 +38,7 @@
   background-color: var(--header-bg-color, #fff);
   margin-block-start: 100px;
   margin-block-end: 100px;
-  font-family: var(--accented-text-font-family), sans-serif;
+  font-family: var(--accented-text-font-family), fantasy;
   text-transform: uppercase;
   border: 2px solid var(--borders-color, #000);
 }
@@ -93,6 +94,7 @@
   border: 2px solid var(--borders-color, #000);
   overflow: hidden;
   color: #fff;
+  transition: box-shadow 0.3s ease; /*Исправлено после первого ревью*/
 }
 
 .button-style::before {
@@ -111,6 +113,10 @@
 
 /*ховер-эффект*/
 
+.button-style:hover {
+  cursor: pointer;
+}
+
 .button-style:hover::before {
   transform: translateX(0%);
 }
@@ -120,12 +126,11 @@
 }
 
 .button-style:focus-visible {
-  box-shadow: 2px 2px 0 #000;
-  transition: box-shadow 0.3s ease;
+  box-shadow: 2px 2px 0 #000; /*Исправлено после первого ревью*/
 }
 
 .button__text {
-  font-family: var(--accented-text-font-family);
+  font-family: var(--accented-text-font-family), fantasy;
   font-size: var(--buttons-font-size);
   line-height: var(--buttons-line-height);
 }
@@ -138,6 +143,7 @@
   font-size: var(--article-text-font-size);
   border: 2px solid var(--borders-color, #000);
   background-color: var(--article-bg-color, #fff);
+  padding-bottom: 25px;
 }
 
 .article__title {
@@ -158,6 +164,8 @@
 .article__image {
   display: block;
   max-width: 100%;
+  object-fit: contain;
+  object-position: center; /*Исправлено после первого ревью*/
 }
 
 .sepia-filter {
@@ -193,7 +201,7 @@
   display: block;
   top: 25px;
   right: 13px;
-  font-family: var(--accented-text-font-family);
+  font-family: var(--accented-text-font-family), fantasy;
   font-size: var(--article-label-font-size);
   text-shadow: -1px 0 var(--label-text-shadow-color, #fff),
     0 1px var(--label-text-shadow-color, #fff),
@@ -203,13 +211,16 @@
   mix-blend-mode: hard-light;
 }
 
-@supports ((text-stroke: 1px var(--label-text-shadow-color, #fff)) or (-webkit-text-stroke: 1px var(--label-text-shadow-color, #fff))) {
+@supports (
+  (text-stroke: 1px var(--label-text-shadow-color, #fff)) or
+    (-webkit-text-stroke: 1px var(--label-text-shadow-color, #fff))
+) {
   .article__label {
     -webkit-text-stroke: 1px var(--label-text-shadow-color, #fff);
     text-stroke: 1px var(--label-text-shadow-color, #fff);
     text-shadow: none;
   }
-} 
+}
 
 .article__text-container {
   display: flex;
@@ -228,34 +239,42 @@
   display: flex;
   flex-direction: row;
   justify-content: end;
-  gap: 6px;
+  gap: 4px;
   padding-right: 25px;
-  padding-bottom: 25px;
 }
 
 .card__icon-button {
   display: block;
-  border: none;
   background-color: transparent;
-  padding-top: 2px;
+  border: 2px solid transparent;
+  max-height: 38px;
+  transition: border 0.3s ease; /*Исправлено после первого ревью*/
 }
 
 .card__icon-button:focus {
   outline: none;
-  border: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid #000;
 }
 
 .like-icon {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 39px;
   height: 36px;
+}
+
+.like-icon:hover {
+  cursor: pointer;
 }
 
 .card__like-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 9px 17px;
   inline-size: fit-content;
   min-width: 130px;
@@ -265,26 +284,31 @@
 
 dialog[open] .dialog__content {
   display: grid;
-  backdrop-filter: opacity(75%);
   column-gap: 20px;
   row-gap: 30px;
 }
 
 dialog[open] {
-  padding: 30px 42px;
+  padding: 30px 39px;
   outline: none;
   border: 2px solid var(--borders-color, #000);
+  width: 100%;
 }
 
-dialog h2 {
+dialog[open]::backdrop {
+  opacity: 0.75;
+  background-color: #000;
+}
+
+.dialog__title {
   line-height: var(--dialog-text-line-height);
-  font-family: var(--accented-text-font-family);
+  font-family: var(--accented-text-font-family), fantasy;
   font-size: var(--dialog-title-font-size);
   text-transform: uppercase;
   grid-column: 2/3;
 }
 
-dialog svg {
+.dialog__icon {
   display: block;
   width: 39px;
   height: 39px;
@@ -299,6 +323,7 @@ dialog button {
   outline: none;
   border: 2px solid var(--borders-color, #000);
   color: #000;
+  text-transform: uppercase;
 }
 
 /*Для телефонов меньше 375px */
@@ -341,15 +366,12 @@ dialog button {
     padding: 12.5px 132.5px;
   }
 
-  dialog[open] .dialog__content {
-    max-width: 293px;
-  }
-
   dialog[open] {
     padding: 30px;
+    width: 353px;
   }
 
   .article__title {
-    line-height: var(--article-title-desktop-line-height);
+    line-height: var(--article-title-desktop-line-height), 120%;
   }
 }
