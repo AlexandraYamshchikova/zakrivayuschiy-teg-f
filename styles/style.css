@@ -94,7 +94,7 @@
   border: 2px solid var(--borders-color, #000);
   overflow: hidden;
   color: #fff;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease; /*Исправлено после первого ревью*/
 }
 
 .button-style::before {
@@ -113,6 +113,10 @@
 
 /*ховер-эффект*/
 
+.button-style:hover {
+  cursor: pointer;
+}
+
 .button-style:hover::before {
   transform: translateX(0%);
 }
@@ -122,8 +126,7 @@
 }
 
 .button-style:focus-visible {
-  box-shadow: 2px 2px 0 #000;
-  transition: box-shadow 0.3s ease;
+  box-shadow: 2px 2px 0 #000;       /*Исправлено после первого ревью*/
 }
 
 .button__text {
@@ -162,8 +165,7 @@
   display: block;
   max-width: 100%;
   object-fit: contain;
-  object-position: center;
-  aspect-ratio: 1 / 1;
+  object-position: center;      /*Исправлено после первого ревью*/
 }
 
 .sepia-filter {
@@ -242,19 +244,17 @@
   display: block; 
   border: none; 
   background-color: transparent; 
- /* padding-top: 2px;*/
   border: 2px solid transparent;
   max-height: 38px;
+  transition: border 0.3s ease;         /*Исправлено после первого ревью*/
 }
 
 .card__icon-button:focus {
   outline: none;
-  border: none;
 }
 
 .card__icon-button:focus-visible {
   border: 2px solid #000;
-  transition: border 0.3s ease;
 }
 
 .like-icon {
@@ -263,6 +263,10 @@
   align-items: center;
   width: 39px;
   height: 36px;
+}
+
+.like-icon:hover {
+  cursor: pointer;
 }
 
 .card__like-button {
@@ -282,10 +286,11 @@ dialog[open] .dialog__content {
   row-gap: 30px;
 }  
 
-dialog[open] { 
-  padding: 30px 42px; 
+dialog[open] {
+  padding: 30px 39px; 
   outline: none; 
   border: 2px solid var(--borders-color, #000); 
+  width: 100%;
 }
 
 dialog[open]::backdrop {
@@ -293,7 +298,7 @@ dialog[open]::backdrop {
   background-color: #000;
 }
 
-dialog h2 { 
+.dialog__title { 
   line-height: var(--dialog-text-line-height); 
   font-family: var(--accented-text-font-family), fantasy; 
   font-size: var(--dialog-title-font-size); 
@@ -301,7 +306,7 @@ dialog h2 {
   grid-column: 2/3;
 }
 
-dialog svg { 
+.dialog__icon { 
   display: block; 
   width: 39px; 
   height: 39px; 
@@ -316,6 +321,7 @@ dialog button {
   outline: none; 
   border: 2px solid var(--borders-color, #000); 
   color: #000; 
+  text-transform: uppercase;
 }
 
 /*Для телефонов меньше 375px */
@@ -356,14 +362,11 @@ dialog button {
 
   dialog button { 
     padding: 12.5px 132.5px; 
-  } 
-
-  dialog[open] .dialog__content { 
-    max-width: 293px; 
-  } 
+  }
 
   dialog[open] { 
-    padding: 30px; 
+    padding: 30px;
+    width: 353px;
   } 
 
   .article__title { 

@@ -11,42 +11,45 @@
 */
 
 /*Стилизация svg сердца*/
+
+/*Дефолтное состояние*/
 .like-icon .heart__fill {
   fill: transparent;
-  transition: fill 0.3s linear 0.05s;
+  transition: fill 0.3s linear 0s; /*При уходе курсора задержки нет*/
 }
 
 .like-icon .heart__cross {
   fill: transparent;
-  transition: fill 0.3s linear;
-  transition-delay: 0.03s;
+  transition: fill 0.3s linear 0.03s; /*При уходе курсора задержка 0.03s*/
 }
+
+/*Ховер*/
+.like-icon:hover .heart__fill {
+  fill: var(--heart-hover-color);
+  transition-delay: 0.05s; /*При ховере задержка 0.05s*/
+}
+
+.like-icon:hover .heart__cross {
+  fill: var(--heart-hover-color);
+  transition-delay: 0s;   /*При наведении задержки нет*/
+}
+
+/*Удержание*/
+.like-icon:active .heart__cross {
+  fill: var(--heart-active-color);
+  transition-delay: 0s; /*Такая же задержка как при ховере*/
+}
+
+.like-icon:active .heart__fill {
+  fill: var(--heart-active-color);
+  transition-delay: 0.05s; /*Такая же задержка как при ховере*/
+}                                                                 /*Всё выше исправлено после первого ревью*/
 
 /*Контур*/
 .like-icon .heart__outline {
   fill: var(--heart-outline-color);
   transition: fill 0.3s linear;
   transition-delay: 0.06s;
-}
-
-/*Ховер*/
-.like-icon:hover .heart__fill {
-  fill: var(--heart-hover-color);
-}
-
-.like-icon:hover .heart__cross {
-  fill: var(--heart-hover-color);
-  transition-delay: 0s;
-}
-
-/*Удержание*/
-
-.like-icon:active .heart__fill {
-  fill: var(--heart-active-color);
-}
-
-.like-icon:active .heart__cross {
-  fill: var(--heart-active-color);
 }
 
 /*Клик*/

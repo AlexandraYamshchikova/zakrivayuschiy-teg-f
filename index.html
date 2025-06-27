@@ -481,6 +481,7 @@
                 <button type="button" class="card__icon-button">
                   <svg
                     class="like-icon"
+                    aria-hidden="true"
                     width="39"
                     height="36"
                     viewBox="0 0 39 36"
@@ -533,16 +534,16 @@
     </main>
     <dialog id="dialog-id">
       <div class="dialog__content">
-        <svg viewBox="0 0 39 39">
+        <svg class="dialog__icon" viewBox="0 0 39 39">
           <use href="svg/floppy.svg#floppy" />
         </svg>
-        <h2>Вставьте дискету, чтобы продолжить</h2>
+        <h2 class="dialog__title">Вставьте дискету, чтобы продолжить</h2>
         <button
           class="button-style button__text"
           type="button"
           onclick="window['dialog-id'].close()"
         >
-          <span>ОК</span>
+          <span>ок</span>
         </button>
       </div>
     </dialog>
