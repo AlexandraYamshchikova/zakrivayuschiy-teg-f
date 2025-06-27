@@ -233,17 +233,16 @@
 /*Кнопки like*/
 
 .article-like-container { 
-  display: flex; 
-  flex-direction: row; 
-  justify-content: end; 
-  gap: 4px; 
-  padding-right: 25px; 
-} 
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 4px;
+  padding-right: 25px;
+}
 
 .card__icon-button {
-  display: block; 
-  border: none; 
-  background-color: transparent; 
+  display: block;
+  background-color: transparent;
   border: 2px solid transparent;
   max-height: 38px;
   transition: border 0.3s ease;         /*Исправлено после первого ревью*/
